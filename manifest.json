@@ -1,0 +1,13 @@
+{
+  "id": "buzz101.dream-map",
+  "name": "Dream map",
+  "apiVersion": 1,
+  "description": "A shared travel map beside a channel. Ask your agent to pin a place you dream of visiting, or post a 📍 line or a map link, and everyone's map fills up live with faces and reasons.",
+  "discovery": {
+    "category": "communication",
+    "tags": ["Maps", "Travel", "Places", "Agents", "Classes"]
+  },
+  "host": {
+    "networkOrigins": ["https://nominatim.openstreetmap.org"]
+  }
+}

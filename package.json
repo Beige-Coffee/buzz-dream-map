@@ -1,0 +1,22 @@
+{
+  "name": "buzz-dream-map",
+  "private": true,
+  "type": "module",
+  "description": "Dream map, a Buzz desktop plugin: a shared travel map beside a channel.",
+  "license": "MIT",
+  "scripts": {
+    "build": "node build.mjs",
+    "verify": "node build.mjs rebuilt.js && cmp rebuilt.js plugin.js && echo 'rebuilt.js matches plugin.js byte for byte'",
+    "test": "node --test plugins/places/test/*.test.mjs"
+  },
+  "devDependencies": {
+    "d3-geo": "3.1.1",
+    "esbuild": "0.25.11",
+    "topojson-client": "3.1.0",
+    "world-atlas": "2.0.2"
+  },
+  "overrides": {
+    "d3-array": "3.2.5",
+    "internmap": "2.0.3"
+  }
+}

@@ -27,3 +27,5 @@ A shared travel map beside a channel. Everyone pins the places they dream of vis
 **Data and licenses.** Map shapes are Natural Earth 1:110m (public domain) through the world-atlas package (ISC). Projections use d3-geo and topojson-client (ISC). Everything is bundled into `plugin.js`; the map loads no tiles and needs no keys.
 
 **Files.** `plugin.js` is the built plugin, one self-contained file. Buzz loads it as committed and runs no build or install step. The plugin's own code is under the MIT license (`LICENSE`); the notices for the bundled libraries and data are in `LICENSES.md`.
+
+**Source.** The source is in `plugins/places/src/` (with `shared/react.js`), in the folder layout of the repository it was written in. `build.mjs` bundles it into `plugin.js` with esbuild. To check that the committed `plugin.js` comes from this source, run `npm ci`, then `npm run verify`: it rebuilds into `rebuilt.js` and compares the two byte for byte. `npm test` runs the plugin's tests. Buzz never runs any of this; it loads `plugin.js` as committed.
